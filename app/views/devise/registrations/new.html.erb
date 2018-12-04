@@ -1,7 +1,4 @@
 
-<%= render "devise/shared/links" %>
-
-
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-signin"}) do |f| %>
 <h2 class="text-center">Sign Up</h2>
   <div class="form-inputs">
@@ -11,6 +8,7 @@
                 placeholder: "Email",
                 input_html: { autocomplete: "email" } %>
     <%= f.input :password,
+                label: false,
                 required: false,
                 placeholder: "Password",
                 input_html: { autocomplete: "current-password" } %>
